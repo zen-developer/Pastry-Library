@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package entities;
-
+import java.math.BigDecimal;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
