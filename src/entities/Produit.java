@@ -185,7 +185,9 @@ public class Produit implements Serializable {
 
     @Override
     public String toString() {
-        return "entities.Produit[ idProduit=" + idProduit + " ]";
+        return "Produit{" + "idProduit=" + idProduit + ", nomProduit=" + nomProduit + ", description=" + description + ", image=" + image + ", quantite=" + quantite + ", prix=" + prix + ", dateExp=" + dateExp + ", idCat=" + idCat + ", ligneCommandeCollection=" + ligneCommandeCollection + '}';
     }
+
+   
     
 }
