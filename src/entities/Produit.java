@@ -63,7 +63,7 @@ public class Produit implements Serializable {
     @Basic(optional = false)
     @Column(name = "prix")
     private double prix;
-    @Basic(optional = false)
+    @Basic(optional = true)
     @Column(name = "date_exp")
     @Temporal(TemporalType.DATE)
     private Date dateExp;

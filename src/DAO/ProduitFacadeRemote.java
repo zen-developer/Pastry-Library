@@ -22,9 +22,9 @@ public interface ProduitFacadeRemote {
 
     void remove(Produit produit);
 
-    Produit find(int id);
+    Produit find(Object id);
     
-    public List<Produit> findAll();
+    public Collection<Produit> findAll();
 
     List<Produit> findRange(int[] range);
     
