@@ -15,7 +15,9 @@ import javax.ejb.Remote;
  */
 @Remote
 public interface ProduitFacadeRemote {
-
+    
+    public Collection<Produit> findAllProduits();
+    
     void create(Produit produit);
 
     void edit(Produit produit);
@@ -24,7 +26,6 @@ public interface ProduitFacadeRemote {
 
     Produit find(Object id);
     
-    public Collection<Produit> findAll();
 
     List<Produit> findRange(int[] range);
     
