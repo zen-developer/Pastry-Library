@@ -5,8 +5,10 @@
 package DAO;
 
 import entities.Commande;
+import java.util.Collection;
 import java.util.List;
 import javax.ejb.Remote;
+import javax.persistence.Query;
 
 /**
  *
@@ -21,7 +23,9 @@ public interface CommandeFacadeRemote {
 
     void remove(Commande commande);
 
-    Commande find(Object id);
+    Commande find(int id);
+    
+    Collection<Commande> findUserCommandes(int id);
 
     List<Commande> findAll();
 

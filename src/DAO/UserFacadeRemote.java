@@ -21,7 +21,7 @@ public interface UserFacadeRemote {
 
     void remove(User user);
 
-    User find(Object id);
+    User find(int id);
 
     List<User> findAll();
 

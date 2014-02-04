@@ -47,7 +47,7 @@ public class Commande implements Serializable {
     private Integer idCommade;
     @Basic(optional = false)
     @Column(name = "date")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date date;
     @Basic(optional = false)
     @Column(name = "etat")
