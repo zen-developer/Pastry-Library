@@ -26,7 +26,7 @@ public interface ProduitFacadeRemote {
 
     Produit find(Object id);
     
-
+    
     List<Produit> findRange(int[] range);
     
     public String sayHello(String name);
