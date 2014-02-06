@@ -5,6 +5,8 @@
 package DAO;
 
 import entities.Categorie;
+import entities.Produit;
+import java.util.Collection;
 import java.util.List;
 import javax.ejb.Remote;
 
@@ -21,11 +23,13 @@ public interface CategorieFacadeRemote {
 
     void remove(Categorie categorie);
 
-    Categorie find(Object id);
+    public Categorie find(int id);
 
     List<Categorie> findAll();
 
     List<Categorie> findRange(int[] range);
+    
+ 
 
     int count();
     
