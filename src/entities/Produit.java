@@ -22,6 +22,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -72,7 +73,8 @@ public class Produit implements Serializable {
     private Categorie idCat;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idProduit")
     private Collection<LigneCommande> ligneCommandeCollection;
-
+    @Transient
+    private int qantiteLigneCommande;
     public Produit() {
     }
 
@@ -158,7 +160,9 @@ public class Produit implements Serializable {
     public Collection<LigneCommande> getLigneCommandeCollection() {
         return ligneCommandeCollection;
     }
-
+    
+    
+    
     public void setLigneCommandeCollection(Collection<LigneCommande> ligneCommandeCollection) {
         this.ligneCommandeCollection = ligneCommandeCollection;
     }
@@ -188,6 +192,15 @@ public class Produit implements Serializable {
         return "Produit{" + "idProduit=" + idProduit + ", nomProduit=" + nomProduit + ", description=" + description + ", image=" + image + ", quantite=" + quantite + ", prix=" + prix + ", dateExp=" + dateExp + ", idCat=" + idCat + ", ligneCommandeCollection=" + ligneCommandeCollection + '}';
     }
 
-   
+    public int getQantiteLigneCommande() {
+        return qantiteLigneCommande;
+    }
+
+    public void setQantiteLigneCommande(int qantiteLigneCommande) {
+        this.qantiteLigneCommande = qantiteLigneCommande;
+    }
+
     
+   
+
 }
