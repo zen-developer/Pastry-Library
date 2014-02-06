@@ -10,6 +10,7 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -68,7 +69,7 @@ public class User implements Serializable {
     private String type;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
     private Collection<Facture> factureCollection;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "idUser")
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "idUser", fetch = FetchType.EAGER)
     private Carte carte;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
     private Collection<Commande> commandeCollection;

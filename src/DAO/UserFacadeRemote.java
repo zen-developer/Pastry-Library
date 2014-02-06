@@ -22,6 +22,8 @@ public interface UserFacadeRemote {
     void remove(User user);
 
     User find(int id);
+    
+    User checkLogin(String email, String pwd);
 
     List<User> findAll();
 

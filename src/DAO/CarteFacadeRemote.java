@@ -5,6 +5,7 @@
 package DAO;
 
 import entities.Carte;
+import entities.User;
 import java.util.List;
 import javax.ejb.Remote;
 
@@ -26,6 +27,8 @@ public interface CarteFacadeRemote {
     List<Carte> findAll();
 
     List<Carte> findRange(int[] range);
+    
+    void removeByIdUser(User id);
 
     int count();
     
